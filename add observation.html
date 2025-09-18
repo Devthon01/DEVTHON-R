@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blue Carbon MRV</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #0073e6;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #0073e6;
+      font-weight: 500;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .form-container, .guidelines-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin: 10px;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    h2 {
+      color: #1a73e8;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background-color: #1a73e8;
+      color: white;
+    }
+
+    .btn-secondary {
+      background-color: #e0e0e0;
+    }
+
+    .guidelines-container h3,
+    .verification-process h3 {
+      margin-top: 0;
+    }
+
+    .guideline {
+      margin-bottom: 20px;
+    }
+
+    .guideline i {
+      margin-right: 8px;
+      color: #1a73e8;
+    }
+
+    .verification-process {
+      margin-top: 30px;
+    }
+
+    .status {
+      margin: 8px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .status::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .pending::before {
+      background-color: orange;
+    }
+
+    .in-review::before {
+      background-color: #1a73e8;
+    }
+
+    .verified::before {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🌊 Blue Carbon MRV</div>
+    <nav>
+      <a href="#">Dashboard</a>
+      <a href="#">Add Observation</a>
+      <button class="btn-secondary">Log In</button>
+      <button class="btn-primary">Sign Up</button>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="form-container">
+      <h2>Add New Observation</h2>
+      <p>Submit a new blue carbon observation for measurement, reporting, and verification.</p>
+      <form id="observationForm">
+        <label for="date">Date</label>
+        <input type="date" id="date" required>
+
+        <label for="location">Location</label>
+        <input type="text" id="location" placeholder="Enter observation location" required>
+
+        <label for="carbon">Carbon Amount (kg CO₂)</label>
+        <input type="number" step="0.01" id="carbon" placeholder="0.00" required>
+
+        <label for="hash">Hash</label>
+        <input type="text" id="hash" placeholder="Enter unique data hash" required>
+
+        <label for="status">Verification Status</label>
+        <select id="status" required>
+          <option value="">Select verification status</option>
+          <option value="pending">Pending</option>
+          <option value="review">In Review</option>
+          <option value="verified">Verified</option>
+        </select>
+
+        <br/><br/>
+        <button type="reset" class="btn-secondary">Reset</button>
+        <button type="submit" class="btn-primary">Add Observation</button>
+      </form>
+    </div>
+
+    <div class="guidelines-container">
+      <h3>📘 Observation Guidelines</h3>
+      <div class="guideline">
+        <strong>📅 Date Accuracy</strong><br/>
+        Ensure the observation date reflects when the measurement was actually taken in the field.
+      </div>
+      <div class="guideline">
+        <strong📍>📍 Location Precision</strong><br/>
+        Provide specific coordinates or detailed location descriptions for verification purposes.
+      </div>
+      <div class="guideline">
+        <strong>⚖️ Carbon Measurements</strong><br/>
+        Record carbon amounts in kg CO₂ equivalent using calibrated instruments.
+      </div>
+      <div class="guideline">
+        <strong>🛡️ Data Integrity</strong><br/>
+        Generate unique hashes for each observation to ensure data authenticity and prevent tampering.
+      </div>
+
+      <div class="verification-process">
+        <h3>🌀 Verification Process</h3>
+        <div class="status pending">Pending - Awaiting initial verification</div>
+        <div class="status in-review">In Review - Under scientific evaluation</div>
+        <div class="status verified">Verified - Approved for carbon crediting</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("observationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Observation submitted successfully!");
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- On your front page (e.g., home.html or index.html) -->
+<a href="loginregistry.html">Login</a>
+<a href="loginregistry.html">Register</a>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Devthon – Blue Carbon Blockchain MRV</title>
+  <style>
+    >/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0077cc;
+}
+
+.auth-buttons .btn {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.login {
+  border: 1px solid #0077cc;
+  color: #0077cc;
+}
+
+.register {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #0077cc, #00aacc);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.primary-btn {
+  background-color: #fff;
+  color: #0077cc;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.primary-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+
+.alt-bg {
+  background-color: #eef6fa;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: white;
+  padding: 2rem;
+  flex: 1;
+  min-width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.service-card h3 {
+  color: #0077cc;
+  margin-bottom: 0.5rem;
+}
+
+.feature-list {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.feature-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .auth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .services-grid {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+
+  </style>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">Devthon</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#mrv">MRV System</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="#" class="btn login">Login</a>
+        <a href="#" class="btn register">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Empowering Blue Carbon Projects with Transparent Blockchain MRV</h1>
+      <p>Devthon provides cutting-edge solutions for measuring, reporting, and verifying blue carbon emissions using a secure blockchain-powered platform.</p>
+      <a href="#services" class="btn primary-btn">Explore Our Services</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Carbon Credit Tracking</h3>
+          <p>Track and certify carbon credits from coastal ecosystems like mangroves, seagrasses, and salt marshes.</p>
+        </div>
+        <div class="service-card">
+          <h3>Blockchain MRV</h3>
+          <p>Ensure full transparency with our immutable MRV records on the blockchain.</p>
+        </div>
+        <div class="service-card">
+          <h3>Data Analytics</h3>
+          <p>Visualize, audit, and forecast carbon data with advanced analytical tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section alt-bg">
+    <div class="container">
+      <h2>About Devthon</h2>
+      <p>Devthon is a climate-tech innovator focused on blue carbon ecosystems. Our goal is to revolutionize the way carbon emissions are monitored and verified by leveraging decentralized technologies. We partner with conservationists, scientists, and governments to build trust through data transparency.</p>
+    </div>
+  </section>
+
+  <!-- MRV Section -->
+  <section id="mrv" class="section">
+    <div class="container">
+      <h2>Blockchain MRV System</h2>
+      <p>Our MRV system is fully blockchain-integrated, providing:</p>
+      <ul class="feature-list">
+        <li>🔗 Tamper-proof verification of carbon offsets</li>
+        <li>📊 Real-time monitoring of ecosystem health</li>
+        <li>✅ Auditable smart contracts for carbon validation</li>
+        <li>🌐 Open data access for regulators and the public</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Devthon. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
